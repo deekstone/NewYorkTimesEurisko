@@ -6,14 +6,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import { NewsDetail } from './src/components/newsDetail/NewsDetail';
 import { enableScreens } from 'react-native-screens';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import configureStore from './src/store';
+import thunk from 'redux-thunk';
+import newsReducer from './src/redux/reducers/NewsReducer';
 
 enableScreens();
 const Stack = createSharedElementStackNavigator();
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
+const store = createStoreWithMiddleware(newsReducer);
 export default function App() {
-	const store = configureStore();
 	return (
 		<Provider store={store}>
 			<NavigationContainer>

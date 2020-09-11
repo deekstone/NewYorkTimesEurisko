@@ -53,6 +53,7 @@ export function NewsDetail(props) {
 
 			<View style={styles.lowerSectionWrapper}>
 				<Text style={styles.authorSection}>{news.byline.original}</Text>
+				<Text style={styles.newAbstract}>{news.abstract}</Text>
 				<Text style={styles.newsDescription}>{news.lead_paragraph}</Text>
 			</View>
 		</ScrollView>

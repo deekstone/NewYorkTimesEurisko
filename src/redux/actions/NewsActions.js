@@ -13,16 +13,22 @@ export const fetchingNewsFailure = (error) => ({
 	payload: error
 });
 
-export const fetchNews = (page, query) => {
+export const fetchNews = (page, query = '') => {
 	return async (dispatch) => {
 		dispatch(fetchingNewsRequest());
 		try {
-			let res = await Axios.get(
+			let res_1 = await Axios.get(
 				GLOBAL_VAR.API_URL +
 					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}&q=${query}`
 			);
+			console.log(`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}&q=${query}`);
+			let res_2 = await Axios.get(
+				GLOBAL_VAR.API_URL +
+					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page + 1}&q=${query}`
+			);
+			console.log(`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page + 1}&q=${query}`);
 
-			dispatch(fetchingNewsSuccess(res.data.response.docs));
+			dispatch(fetchingNewsSuccess([ ...res_1.data.response.docs, ...res_2.data.response.docs ]));
 		} catch (error) {
 			dispatch(fetchingNewsFailure(error));
 		}
@@ -34,15 +40,22 @@ export const loadMoreNewsSuccess = (json) => ({
 	payload: json
 });
 
-export const loadMoreNews = (page) => {
+export const loadMoreNews = (page, query) => {
 	return async (dispatch) => {
 		dispatch(fetchingNewsRequest());
 		try {
-			let res = await Axios.get(
-				GLOBAL_VAR.API_URL + `articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}`
+			let res_1 = await Axios.get(
+				GLOBAL_VAR.API_URL +
+					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}&q=${query}`
 			);
+			console.log(`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}&q=${query}`);
+			let res_2 = await Axios.get(
+				GLOBAL_VAR.API_URL +
+					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page++}&q=${query}`
+			);
+			console.log(`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page++}&q=${query}`);
 
-			dispatch(loadMoreNewsSuccess(res.data.response.docs));
+			dispatch(loadMoreNewsSuccess([ ...res_1.data.response.docs, ...res_2.data.response.docs ]));
 		} catch (error) {
 			dispatch(fetchingNewsFailure(error));
 		}

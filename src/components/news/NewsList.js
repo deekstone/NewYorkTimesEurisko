@@ -1,60 +1,22 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Text, View, SafeAreaView, FlatList, RefreshControl, ActivityIndicator } from 'react-native';
-
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import NewsRow from './NewsRow';
-import { SearchBar, Button } from 'react-native-elements';
-import { useNavigation } from '@react-navigation/native';
 import { fetchNews, loadMoreNews } from '../../redux/actions/NewsActions';
-import { getNews } from '../../Api/Helpers/NewsApi';
 import { connect } from 'react-redux';
+import { SearchBar } from 'react-native-elements';
 class NewsList extends React.Component {
 	constructor() {
 		super();
 
 		this.state = {
-			isRefreshing: false
+			searchText: ''
 		};
 	}
 
 	componentDidMount() {
 		this.props.fetchNews(1);
-		// this.refreshNews();
 	}
-
-	// fetchNews = (concat) => {
-	// 	if (!concat) this.setState({ isRefreshing: true });
-
-	// 	getNews(this.state.page)
-	// 		.then((res) => {
-	// 			this.setState({
-	// 				data: concat ? this.state.data.concat(res) : res,
-	// 				isRefreshing: false,
-	// 				loading: false
-	// 			});
-	// 		})
-	// 		.catch((error) => {
-	// 			alert(error);
-	// 			this.setState({
-	// 				isRefreshing: false,
-	// 				loading: false
-	// 			});
-	// 		});
-	// };
-
-	// handleLoadMore = () => {
-	// 	if (this.state.loading) return;
-	// 	this.setState({ page: this.state.page + 1, loading: true }, () => {
-	// 		this.fetchNews(true);
-	// 	});
-	// };
-
-	// refreshNews = () => {
-	// 	this.setState({ page: 1, loading: true }, () => {
-	// 		this.fetchNews(false);
-	// 	});
-	// };
 
 	renderFooter = () => {
 		return !this.props.newsData.isRefreshing ? (
@@ -65,6 +27,19 @@ class NewsList extends React.Component {
 	render() {
 		return (
 			<View style={{ flex: 1 }}>
+				<SearchBar
+					placeholder="Search news..."
+					round
+					lightTheme
+					value={this.state.searchText}
+					onChangeText={(e) => {
+						this.setState({ searchText: e });
+					}}
+					onClear={(e) => {
+						this.props.fetchNews(1, '');
+					}}
+					onSubmitEditing={() => this.props.fetchNews(1, this.state.searchText)}
+				/>
 				<FlatList
 					data={this.props.newsData.data}
 					refreshing={this.props.newsData.isRefreshing}
@@ -86,7 +61,8 @@ class NewsList extends React.Component {
 						return index.toString();
 					}}
 					onEndReached={() => {
-						this.props.loadMoreNews(this.props.newsData.page);
+						if (!this.props.newsData.isRefreshing)
+							this.props.loadMoreNews(this.props.newsData.page, this.state.searchText);
 					}}
 					onEndReachedThreshold={0.1}
 					ListFooterComponent={this.renderFooter}
@@ -97,6 +73,7 @@ class NewsList extends React.Component {
 }
 
 const mapStateToProps = (p_state) => {
+	console.log(p_state.page);
 	return {
 		newsData: p_state
 	};

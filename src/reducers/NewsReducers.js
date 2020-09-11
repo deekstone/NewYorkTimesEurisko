@@ -1,21 +1,19 @@
-import { FETCH_NEWS, LOAD_MORE_NEWS } from '../actions/Types';
+import { FETCH_NEWS, LOAD_MORE_NEWS } from "../actions/Types";
 
 const initialState = {
-	newsList: []
+  newsList: [],
 };
 
 const NewsReducers = (state = initialState, action) => {
-	switch (action.type) {
-		case FETCH_NEWS:
-			return {};
-		case LOAD_MORE_NEWS:
-			return {
-				...state,
-				newsList: {}
-			};
-		default:
-			return state;
-	}
+  switch (action.type) {
+    case FETCH_NEWS:
+      return {};
+    case LOAD_MORE_NEWS:
+      console.log("getNews");
+      return {};
+    default:
+      return state;
+  }
 };
 
 export default NewsReducers;

@@ -1,5 +1,5 @@
-import Axios from 'axios';
-import { FETCH_NEWS, LOAD_MORE_NEWS } from './Types';
+import Axios from "axios";
+import { FETCH_NEWS, LOAD_MORE_NEWS } from "./Types";
 
 // export const getNews = (page_number, concat) => (dispatch) => {
 // 	Axios.get(
@@ -13,14 +13,13 @@ import { FETCH_NEWS, LOAD_MORE_NEWS } from './Types';
 // };
 
 export const getNews = () => {
-	console.log('Aasdasdassd');
-	return {
-		type: LOAD_MORE_NEWS,
-		data: []
-	};
+  return {
+    type: LOAD_MORE_NEWS,
+    data: [],
+  };
 };
 
 export const loadMoreNews = () => ({
-	type: LOAD_MORE_NEWS,
-	data: []
+  type: LOAD_MORE_NEWS,
+  data: [],
 });

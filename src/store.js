@@ -1,8 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import { NewsReducers } from './reducers/NewsReducers';
+import { createStore, combineReducers } from "redux";
+import NewsReducers from "./reducers/NewsReducers";
 
 const roorReducer = combineReducers({
-	newsReducer: NewsReducers
+  newsReducer: NewsReducers,
 });
 
 const store = () => createStore(roorReducer);

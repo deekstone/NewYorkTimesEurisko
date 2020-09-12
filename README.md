@@ -31,8 +31,8 @@ npm start
 
 ## Screenshots
 <div style="display:inline-block;">
-<img src="demo/img/screenshot1.jpeg" alt="drawing"  height="200"/>
-<img src="demo/img/screenshot2.jpeg" alt="drawing"  height="200"/> 
+<img src="demo/img/screenshot1.jpeg" alt="drawing"  height="300"/>
+<img src="demo/img/screenshot2.jpeg" alt="drawing"  height="300"/> 
 <div>
 ## Features 
  . Shareability  

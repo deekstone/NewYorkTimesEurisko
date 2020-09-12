@@ -4,14 +4,14 @@ This app will get the newest news from the New York Times API
 
 ## Installation Android
 
-. Install the Expo application from the Google Play Store
-. I have uploaded the app on Expo
-   - This is the [Link](https://expo.io/@elie.deek1/NewYorkTimes) of the app 
-   - Open the expo application and scan the QRCODE in the Link 
+. Install the Expo application from the Google Play Store  
+. I have uploaded the app on Expo  
+   - This is the [Link](https://expo.io/@elie.deek1/NewYorkTimes) of the app  
+   - Open the expo application and scan the QRCODE in the Link   
    
 ## Installation IOS
- . Since you cant run published application on ios 
- . Open any terminal and go to the root folder after cloning it
+ . Since you cant run published application on ios  
+ . Open any terminal and go to the root folder after cloning it  
 
 ```bash
 cd ..<Go to the root app>
@@ -24,9 +24,9 @@ npm install --global expo-cli
 ```bash
 npm start
 ```
-. The browser will now open automatically with the QRCODE shown
-. Tick the production radio button 
-![Tick the production radio button ](demo/productionSelected.gif)
-. Open the camera application on your IPhone device and scan it 
+. The browser will now open automatically with the QRCODE shown  
+. Tick the production radio button  
+![Tick the production radio button ](demo/productionSelected.gif)  
+. Open the camera application on your IPhone device and scan it  
 
 #Features 

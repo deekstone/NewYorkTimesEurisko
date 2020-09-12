@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, createRef } from 'react';
 import { Text, View, SafeAreaView, FlatList, RefreshControl, ActivityIndicator } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import NewsRow from './NewsRow';
@@ -6,6 +6,7 @@ import { fetchNews, loadMoreNews } from '../../redux/actions/NewsActions';
 import { connect } from 'react-redux';
 import { SearchBar } from 'react-native-elements';
 class NewsList extends React.Component {
+	flatListRef = createRef();
 	constructor() {
 		super();
 
@@ -37,10 +38,16 @@ class NewsList extends React.Component {
 					}}
 					onClear={(e) => {
 						this.props.fetchNews(1, '');
+						this.flatListRef.current.scrollToOffset({ animated: true, offset: 0 });
 					}}
-					onSubmitEditing={() => this.props.fetchNews(1, this.state.searchText)}
+					onSubmitEditing={() => {
+						if (this.state.searchText.length == 0) return;
+						this.props.fetchNews(1, this.state.searchText);
+						this.flatListRef.current.scrollToOffset({ animated: true, offset: 0 });
+					}}
 				/>
 				<FlatList
+					ref={this.flatListRef}
 					data={this.props.newsData.data}
 					refreshing={this.props.newsData.isRefreshing}
 					onRefresh={() => {
@@ -61,10 +68,10 @@ class NewsList extends React.Component {
 						return index.toString();
 					}}
 					onEndReached={() => {
-						if (!this.props.newsData.isRefreshing)
+						if (!this.props.newsData.isLoading)
 							this.props.loadMoreNews(this.props.newsData.page, this.state.searchText);
 					}}
-					onEndReachedThreshold={0.1}
+					onEndReachedThreshold={0.5}
 					ListFooterComponent={this.renderFooter}
 				/>
 			</View>
@@ -73,7 +80,6 @@ class NewsList extends React.Component {
 }
 
 const mapStateToProps = (p_state) => {
-	console.log(p_state.page);
 	return {
 		newsData: p_state
 	};

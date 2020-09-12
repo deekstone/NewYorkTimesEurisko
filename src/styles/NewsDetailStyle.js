@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
 	},
 	headerSectionDate: {
 		marginTop: 10,
-		color: '#575757'
+		color: '#575757',
+		padding: 5
 	}
 });

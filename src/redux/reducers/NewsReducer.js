@@ -6,6 +6,9 @@ import {
 	LOAD_MORE_NEWS_SUCCESS
 } from '../actions/Types';
 
+/**
+ * This is the initial reducer state
+ */
 const initialState = {
 	data: [],
 	page: 1,
@@ -15,6 +18,11 @@ const initialState = {
 	isLoading: false
 };
 
+/**
+ * Reducer will be called each time we dispatch data from our actions
+ * @param {*} state state will be defaulted to the initialState in case it is not yet defined 
+ * @param {*} action SUCCESS , Failure...
+ */
 const newsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case FETCHING_NEWS_REQUEST:
@@ -24,8 +32,11 @@ const newsReducer = (state = initialState, action) => {
 		case FETCHING_NEWS_SUCCESS:
 			return { ...state, isRefreshing: false, isLoading: false, data: action.payload, page: 3 };
 		case LOAD_MORE_NEWS_SUCCESS:
+			//Increasing the number of pages by 2 each time since we are getting 20 news each time (10 News a page)
 			const v_page = state.page + 2;
 
+			//Concatenation the new news received with the old news
+			//setting all the loaders as false
 			return {
 				...state,
 				isRefreshing: false,

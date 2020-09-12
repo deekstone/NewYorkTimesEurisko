@@ -14,7 +14,13 @@ import newsReducer from './src/redux/reducers/NewsReducer';
 enableScreens();
 const Stack = createSharedElementStackNavigator();
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as
+ * expressing asynchronous actions in a concise manner, or logging every
+ * action payload.
+ * 
+ **/
 const store = createStoreWithMiddleware(newsReducer);
 export default function App() {
 	return (
@@ -32,6 +38,7 @@ export default function App() {
 								alignItems: 'center'
 							},
 							headerLeft: () => (
+								//App logo added in the nav bar
 								<Image
 									source={require('./src/assets/nytimestimeline.jpg')}
 									style={{
@@ -49,7 +56,7 @@ export default function App() {
 						options={{
 							headerTitle: '',
 							gestureEnabled: false,
-
+							//customizing the animation
 							transitionSpec: {
 								open: { animation: 'timing', config: { duration: 250 } },
 								close: { animation: 'timing', config: { duration: 250 } }
@@ -62,6 +69,7 @@ export default function App() {
 								};
 							}
 						}}
+						//Sharing the news Photo and item title in order to have a small animation when navigating from the news to the news detail
 						sharedElementsConfig={(route) => {
 							const { item } = route.params;
 							return [ `itemPhoto.${route.params._id}`, `itemTitle.${route.params._id}` ];

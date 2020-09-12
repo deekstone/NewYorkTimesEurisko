@@ -34,6 +34,10 @@ npm start
 ![News Detail](demo/img/screenshot2.jpeg)  
 
 ## Features 
-
-###Shareability
-
+ . Shareability
+![Shareability](demo/gifs/screenshot2.jpeg) 
+ . Image Transition between the master and the detail 
+![Image Transition](demo/gifs/imageTransition.gif)  
+ . Scroll to refresh 
+ ![Image Transition](demo/gifs/scrollToRefresh.gif)  
+ 

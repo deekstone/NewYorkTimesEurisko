@@ -30,9 +30,9 @@ npm start
 . Open the camera application on your IPhone device and scan it  
 
 ## Screenshots
-![News List](demo/img/screenshot1.jpeg =100x20) 
-<img src="demo/img/screenshot1.jpeg" alt="drawing"  width="100" height="100"/> 
-![News Detail](demo/img/screenshot2.jpeg =100x20) 
+ 
+<img src="demo/img/screenshot1.jpeg" alt="drawing"  height="200"/>
+<img src="demo/img/screenshot2.jpeg" alt="drawing"  height="200"/> 
 
 ## Features 
  . Shareability  

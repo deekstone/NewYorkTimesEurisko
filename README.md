@@ -41,7 +41,7 @@ npm start
  . Scroll to refresh 
  . Scroll to the end of the list to load more news
  
-![Image Transition](demo/gifs/imageTransition.gif)  
+![Image Transition](demo/gifs/imageTransition.gif)
 ![Image Transition](demo/gifs/scrollToRefresh.gif)  
  
  

@@ -31,7 +31,7 @@ npm start
 
 ## Screenshots
 ![News List](demo/img/screenshot1.jpeg =100x20) 
-<img src="demo/img/screenshot1.jpeg" alt="drawing" style="height:100px;"/>
+<img src="demo/img/screenshot1.jpeg" alt="drawing"  width="100" height="100"/> 
 ![News Detail](demo/img/screenshot2.jpeg =100x20) 
 
 ## Features 

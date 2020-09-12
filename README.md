@@ -26,7 +26,22 @@ npm start
 ```
 . The browser will now open automatically with the QRCODE shown  
 . Tick the production radio button  
-![Tick the production radio button ](demo/productionSelected.gif)  
+![Tick the production radio button ](demo/gifs/productionSelected.gif)    
 . Open the camera application on your IPhone device and scan it  
 
-#Features 
+## Screenshots
+<div style="display:inline-block;">
+<img src="demo/img/screenshot2.jpeg" alt="drawing"  height="400"/> 
+<img src="demo/img/screenshot1.jpeg" alt="drawing"  height="400"/>
+<div>
+   
+## Features 
+ . Shareability  
+ . Image Transition between the master and the detail  
+ . Scroll to refresh 
+ . Scroll to the end of the list to load more news
+ 
+![Image Transition](demo/gifs/imageTransition.gif)
+![Image Transition](demo/gifs/scrollToRefresh.gif)  
+ 
+ 

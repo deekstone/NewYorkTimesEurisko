@@ -33,12 +33,14 @@ npm start
 <div style="display:inline-block;">
 <img src="demo/img/screenshot2.jpeg" alt="drawing"  height="400"/> 
 <img src="demo/img/screenshot1.jpeg" alt="drawing"  height="400"/>
-
 <div>
+   
 ## Features 
  . Shareability  
  . Image Transition between the master and the detail  
  . Scroll to refresh 
+<div style="display:inline-block;">
 ![Image Transition](demo/gifs/imageTransition.gif)  
 ![Image Transition](demo/gifs/scrollToRefresh.gif)  
+</div>
  

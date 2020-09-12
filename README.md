@@ -38,8 +38,8 @@ npm start
 ## Features 
  . Shareability  
  . Image Transition between the master and the detail  
- . Scroll to refresh 
- . Scroll to the end of the list to load more news
+ . Scroll to refresh  
+ . Scroll to the end of the list to load more news  
   
 <img src="demo/gifs/imageTransition.gif" alt="drawing"  height="400"/>
 <img src="demo/gifs/shareability.gif" alt="drawing"  height="400"/>

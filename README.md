@@ -26,7 +26,14 @@ npm start
 ```
 . The browser will now open automatically with the QRCODE shown  
 . Tick the production radio button  
-![Tick the production radio button ](demo/productionSelected.gif)  
+![Tick the production radio button ](demo/gif/productionSelected.gif)  
 . Open the camera application on your IPhone device and scan it  
 
-#Features 
+## Screenshots
+![News List](demo/img/screenshot1.jpeg)  
+![News Detail](demo/img/screenshot2.jpeg)  
+
+## Features 
+
+###Shareability
+

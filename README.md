@@ -8,7 +8,7 @@ This app will get the newest news from the New York Times API
 . A publish application is uploaded to the expo servers
    - Open your Expo application
    - Scan the following QRcode  
-   <img src="demo/img/expoLogo.png" alt="drawing"  height="400"/>  
+   <img src="demo/img/appQRCODE.png" alt="drawing"  height="400"/>  
    
 ## Installation IOS
  . Since you cant run published application on ios  

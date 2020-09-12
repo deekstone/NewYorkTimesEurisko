@@ -39,8 +39,9 @@ npm start
  . Shareability  
  . Image Transition between the master and the detail  
  . Scroll to refresh 
-<div style="display:inline-block;">
+ . Scroll to the end of the list to load more news
+ 
 ![Image Transition](demo/gifs/imageTransition.gif)  
 ![Image Transition](demo/gifs/scrollToRefresh.gif)  
-</div>
+ 
  

@@ -42,6 +42,7 @@ npm start
  . Scroll to the end of the list to load more news
  
 ![Image Transition](demo/gifs/imageTransition.gif)
-![Image Transition](demo/gifs/shareability.gif = 120px)  
+<img src="demo/gifs/shareability.gif" alt="drawing"  height="400"/>
+  
  
  

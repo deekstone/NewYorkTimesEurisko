@@ -40,8 +40,8 @@ npm start
  . Image Transition between the master and the detail  
  . Scroll to refresh 
  . Scroll to the end of the list to load more news
- 
-![Image Transition](demo/gifs/imageTransition.gif)
+  
+<img src="demo/gifs/imageTransition.gif" alt="drawing"  height="400"/>
 <img src="demo/gifs/shareability.gif" alt="drawing"  height="400"/>
   
  

@@ -4,7 +4,7 @@ This app will get the newest news from the New York Times API
 
 ## Installation Android
 
-. Install the Expo application from the goole play store
+. Install the Expo application from the Google Play Store
 . I have uploaded the app on Expo
    - This is the [Link](https://expo.io/@elie.deek1/NewYorkTimes) of the app 
    - Open the expo application and scan the QRCODE in the Link 

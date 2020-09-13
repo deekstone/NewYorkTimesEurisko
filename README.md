@@ -12,7 +12,7 @@ This app will get the newest news from the New York Times API
    
 ## Installation IOS
  . Since you cant run published application on ios  
- . Install the Expo application on your device
+ . Install the Expo application on your device  
  . Open any terminal and go to the root folder after cloning it  
 
 ```bash

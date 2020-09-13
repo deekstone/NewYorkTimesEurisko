@@ -34,7 +34,7 @@ describe('Testing the reducer', () => {
 });
 
 /**
- * After a force refresh the page 1 and 2 mustbe fetched and then we must set the page to
+ * After a force refresh the page 1 and 2 must be fetched and then we must set the page to 3
  */
 it('Make sure the loader are equal to false after api call is done and the page is set to 3 ', () => {
 	expect(

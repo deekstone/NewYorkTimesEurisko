@@ -46,5 +46,10 @@ npm start
 <img src="demo/gifs/imageTransition.gif" alt="drawing"  height="400"/>
 <img src="demo/gifs/shareability.gif" alt="drawing"  height="400"/>
   
+## Run Jest Tests
+
+```bash
+npm test
+```
  
  

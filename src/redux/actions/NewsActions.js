@@ -80,6 +80,8 @@ export const loadMoreNews = (page, query) => {
 			//Here the data from the first and the second api call are being concatenated and then dispatched
 			dispatch(loadMoreNewsSuccess([ ...res_1.data.response.docs, ...res_2.data.response.docs ]));
 		} catch (error) {
+			//In case of an error.
+			//the error will be dispatched
 			dispatch(fetchingNewsFailure(error));
 		}
 	};

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 5,
+      "elevation": 5,
+      "marginBottom": 10,
+      "overflow": "hidden",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        collapsable={false}
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://www.nytimes.com/images/2008/11/05/world/1105-REACTS-B.JPG",
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+              "height": 180,
+              "resizeMode": "cover",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "backgroundColor": "rgba(52, 52, 52, 0.8)",
+            "bottom": 0,
+            "color": "#FFFFFF",
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "padding": 10,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        The World Reacts
+      </Text>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#545454",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "padding": 10,
+          "paddingTop": 8,
+        }
+      }
+    >
+      From Hong Kong to Kuwait to Paris, crowds gathered to watch U.S. presidential election results and supporters of Barack Obama celebrated his victory.
+    </Text>
+  </View>
+</View>
+`;

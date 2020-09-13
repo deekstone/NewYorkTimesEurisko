@@ -13,7 +13,9 @@ export const styles = StyleSheet.create({
 	titleWrapper: {
 		fontWeight: 'bold',
 		fontSize: 20,
-		padding: 10
+		padding: 10,
+		backgroundColor: 'rgba(52, 52, 52, 0.8)',
+		color: '#FFFFFF'
 	},
 	titleWithImage: {
 		position: 'absolute',

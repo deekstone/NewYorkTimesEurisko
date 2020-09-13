@@ -20,6 +20,9 @@ cd ..<Go to the root app>
 ```
 . In case you dont have the expo installed on your machine run
 ```bash
+npm install 
+```
+```bash
 npm install --global expo-cli
 ```
 . Then in order to get a QRCODE run

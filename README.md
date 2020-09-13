@@ -12,7 +12,7 @@ This app will get the newest news from the New York Times API
    
 ## Installation IOS
  . Since you cant run published application on ios  
- . Install the Expo application on your device
+ . Install the Expo application on your device  
  . Open any terminal and go to the root folder after cloning it  
 
 ```bash
@@ -27,6 +27,7 @@ npm install --global expo-cli
 npm start
 ```
 . The browser will now open automatically with the QRCODE shown  
+. Make sure that your mobile phone is connected to the same network as the expo server
 . Tick the production radio button  
 ![Tick the production radio button ](demo/gifs/productionSelected.gif)    
 . Open the camera application on your IPhone device and scan it  
@@ -46,5 +47,10 @@ npm start
 <img src="demo/gifs/imageTransition.gif" alt="drawing"  height="400"/>
 <img src="demo/gifs/shareability.gif" alt="drawing"  height="400"/>
   
+## Run Jest Tests
+
+```bash
+npm test
+```
  
  

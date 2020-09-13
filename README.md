@@ -8,7 +8,7 @@ This app will get the newest news from the New York Times API
 . The application is hosted on the Expo servers
    - Open your Expo application on your android device
    - Scan the following QRcode  
-   <img src="demo/img/appQRCODE.png" alt="drawing"  height="200"/>  
+   <img src="demo/img/appQRCODE_1.png" alt="drawing"  height="200"/>  
    
 ## Installation IOS
  . Since you cant run published application on ios  

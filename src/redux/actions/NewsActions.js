@@ -35,6 +35,7 @@ export const fetchNews = (page, query = '') => {
 				GLOBAL_VAR.API_URL +
 					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page}&q=${query}`
 			);
+
 			let res_2 = await Axios.get(
 				GLOBAL_VAR.API_URL +
 					`articlesearch.json?api-key=${GLOBAL_VAR.API_KEY}&sort=newest&page=${page + 1}&q=${query}`

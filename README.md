@@ -27,6 +27,7 @@ npm install --global expo-cli
 npm start
 ```
 . The browser will now open automatically with the QRCODE shown  
+. Make sure that your mobile phone is connected to the same network as the expo server
 . Tick the production radio button  
 ![Tick the production radio button ](demo/gifs/productionSelected.gif)    
 . Open the camera application on your IPhone device and scan it  
